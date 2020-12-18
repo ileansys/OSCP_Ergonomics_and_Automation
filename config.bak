@@ -1,0 +1,94 @@
+[global_config]
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.91
+    cursor_color = "#aaaaaa"
+    font = Menlo for Powerline Bold 10
+    foreground_color = "#839496"
+    show_titlebar = False
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+  [[oscp]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1920:0
+      maximised = True
+      fullscreen = False
+      size = 1440, 863
+      title = andrew@linux:~
+      last_active_term = e4a4a4da-dac5-47c6-ba2f-2cf4284537ac
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 342
+      ratio = 0.3986013986013986
+    [[[child2]]]
+      type = VPaned
+      parent = child1
+      order = 0
+      position = 172
+      ratio = 0.5103857566765578
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = e4a4a4da-dac5-47c6-ba2f-2cf4284537ac
+      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX 2>/dev/null; mkdir projectX/#1  2>/dev/null; cd projectX/#1; exec \$SHELL -l"
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = f89ca858-d635-48f1-96c1-f4bdbbd18455
+      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#2  2>/dev/null; cd projectX/#2; exec \$SHELL -l"
+    [[[child5]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 161
+      ratio = 0.312621359223301
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      order = 0
+      profile = default
+      uuid = d8f5df1c-d251-4535-be42-86d21ef412bb
+      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#3  2>/dev/null; cd projectX/#3; exec \$SHELL -l"
+    [[[child7]]]
+      type = VPaned
+      parent = child5
+      order = 1
+      position = 174
+      ratio = 0.49291784702549574
+    [[[terminal8]]]
+      type = Terminal
+      parent = child7
+      order = 0
+      profile = default
+      uuid = 2d9ed7cb-08c2-47be-9bac-c7d1ef474fed
+      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#4  2>/dev/null; cd projectX/#4; exec \$SHELL -l"
+    [[[terminal9]]]
+      type = Terminal
+      parent = child7
+      order = 1
+      profile = default
+      uuid = 1cc252ad-f0ed-46bd-adaa-0756c539f759
+      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#5  2>/dev/null; cd projectX/#5; exec \$SHELL -l"
+[plugins]

@@ -30,7 +30,7 @@ done
 ```
 
 
-__dollar_ip_promt_command.sh__ - Has a PROMPT_COMMAND env variable that will track a directory named using an IP on the current path (pwd)
+__dollar_ip_prompt_command.sh__ - Has a PROMPT_COMMAND env variable that will track a directory named using an IP on the current path (pwd)
                              and it will set the $ip env variable to that IP named directory. The code should be place on .bashrc or .profile.
 
 ```bash

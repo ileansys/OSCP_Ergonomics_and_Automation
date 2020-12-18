@@ -1,7 +1,8 @@
 # OSCP
 ## OSCP Ergonomic Scripts and Configs
 
-[![]()](https://www.youtube.com/watch?v=vRj62ltRSiY "Click to play on Youtube")]
+[![Watch the video](https://i1.ytimg.com/vi/vRj62ltRSiY/sddefault.jpg)](https://www.youtube.com/watch?v=vRj62ltRSiY)
+
 
 __config.bak__ - A terminator config file that will be used to launch terminator and execute commands like ($ autorecon $ip) 
              across different IP folders using broadcast all mode.

@@ -1,9 +1,6 @@
 # OSCP
 ## OSCP Ergonomic Scripts and Configs
 
-[![Watch the video](https://i1.ytimg.com/vi/vRj62ltRSiY/sddefault.jpg)](https://www.youtube.com/watch?v=vRj62ltRSiY "Click to watch video on Youtube")
-
-
 __config.bak__ - A terminator config file that will be used to launch terminator and execute commands like ($ autorecon $ip) 
              across different IP folders using broadcast all mode.
 
@@ -55,3 +52,5 @@ function prompt_command {
 }
 export PROMPT_COMMAND=prompt_command
 ```
+
+[![Watch the video](https://i1.ytimg.com/vi/vRj62ltRSiY/sddefault.jpg)](https://www.youtube.com/watch?v=vRj62ltRSiY "Click to watch demo on Youtube")

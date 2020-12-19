@@ -8,9 +8,14 @@ __autoterm.sh__ - A script that will replace the placeholder ProjectX and #1,2,3
 
 ```bash
 # Example - terminators config file is reset using config.bak and reconfigured with the new projects IPs
-# $ ./autoterm.sh
-# Project Name: OSCP_X
-# IPs: 10.10.10.10 10.10.10.23 10.10.10.34 10.10.10.45 10.10.10.60
+# $./autoterm.sh
+# Insert your Kali IP (Default: 127.0.0.1): 192.168.0.104
+# Insert your Kali Port (Default: 22): 2222
+# Setting Kali IP to 192.168.0.104
+# Setting Kali SSH Port to 2222
+# Project Name: R
+# IPs: 10.10.10.23 10.10.10.5
+# Terminator config successfully changed.
 
 #!/bin/bash
 # Restore original config

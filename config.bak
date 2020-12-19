@@ -50,14 +50,14 @@
       order = 0
       profile = default
       uuid = e4a4a4da-dac5-47c6-ba2f-2cf4284537ac
-      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX 2>/dev/null; mkdir projectX/#1  2>/dev/null; cd projectX/#1; exec \$SHELL -l"
+      command = ssh -p2222 -t root@127.0.0.1 "mkdir projectX 2>/dev/null; mkdir projectX/#1  2>/dev/null; cd projectX/#1; exec \$SHELL -l"
     [[[terminal4]]]
       type = Terminal
       parent = child2
       order = 1
       profile = default
       uuid = f89ca858-d635-48f1-96c1-f4bdbbd18455
-      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#2  2>/dev/null; cd projectX/#2; exec \$SHELL -l"
+      command = ssh -p2222 -t root@127.0.0.1 "mkdir projectX  2>/dev/null; mkdir projectX/#2  2>/dev/null; cd projectX/#2; exec \$SHELL -l"
     [[[child5]]]
       type = VPaned
       parent = child1
@@ -70,7 +70,7 @@
       order = 0
       profile = default
       uuid = d8f5df1c-d251-4535-be42-86d21ef412bb
-      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#3  2>/dev/null; cd projectX/#3; exec \$SHELL -l"
+      command = ssh -p2222 -t root@127.0.0.1 "mkdir projectX  2>/dev/null; mkdir projectX/#3  2>/dev/null; cd projectX/#3; exec \$SHELL -l"
     [[[child7]]]
       type = VPaned
       parent = child5
@@ -83,12 +83,12 @@
       order = 0
       profile = default
       uuid = 2d9ed7cb-08c2-47be-9bac-c7d1ef474fed
-      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#4  2>/dev/null; cd projectX/#4; exec \$SHELL -l"
+      command = ssh -p2222 -t root@127.0.0.1 "mkdir projectX  2>/dev/null; mkdir projectX/#4  2>/dev/null; cd projectX/#4; exec \$SHELL -l"
     [[[terminal9]]]
       type = Terminal
       parent = child7
       order = 1
       profile = default
       uuid = 1cc252ad-f0ed-46bd-adaa-0756c539f759
-      command = ssh -p2222 -t root@192.168.0.104 "mkdir projectX  2>/dev/null; mkdir projectX/#5  2>/dev/null; cd projectX/#5; exec \$SHELL -l"
+      command = ssh -p2222 -t root@127.0.0.1 "mkdir projectX  2>/dev/null; mkdir projectX/#5  2>/dev/null; cd projectX/#5; exec \$SHELL -l"
 [plugins]

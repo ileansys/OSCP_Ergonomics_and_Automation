@@ -20,18 +20,56 @@ __autoterm.sh__ - A script that will replace the placeholder ProjectX and #1,2,3
 #!/bin/bash
 # Restore original config
 cp ~/.config/terminator/config.bak ~/.config/terminator/config
-# Ask user for IPs
-count=0
+count=0 #Counter for Number of IPs
+
+# This host should be accessible via ssh-keys. SSH Password prompt won't work
+read -a kalibox -p 'Insert your Kali IP (Default: 127.0.0.1): '
+# The ssh service on this host should be running on port 22 by default
+read -a kaliport -p 'Insert your Kali Port (Default: 22): ' 
+
+if [ -z "$kalibox" ]
+then 
+  kalibox="127.0.0.1";
+fi 
+
+echo "Setting Kali IP to ${kalibox}"
+
+if [ -z "$kaliport" ]
+then 
+  kaliport="22";
+fi
+
+echo "Setting Kali SSH Port to ${kaliport}"
+
 read -a project -p 'Project Name: '
-read -a arr -p 'IPs: ' 
-for elem in ${arr[@]}
+read -a ips -p 'IPs: '
+
+if [ -z "$project" ]
+then 
+  echo "Project Name cannot be empty"
+  exit 0
+fi
+
+if [ -z "$ips" ]
+then 
+  echo "Please specify some IPs"
+  exit 0
+fi 
+
+for elem in ${ips[@]}
 do
+  if [[ ! "$elem" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then 
+    echo "Please specify real IPs"
+    exit 0
+  fi 
   count=$((count+1))
+  sed -i "s/127.0.0.1/$kalibox/g" ~/.config/terminator/config
+  sed -i "s/2222/$kaliport/g" ~/.config/terminator/config
   sed -i "s/projectX/$project/g" ~/.config/terminator/config 
   sed -i "s/#$count/$elem/g" ~/.config/terminator/config 
 done
 
-
+echo 'Terminator config successfully changed.'
 ```
 
 

@@ -2,7 +2,7 @@
 # Restore original config
 cp ~/.config/terminator/config.bak ~/.config/terminator/config
 count=0 #Counter for Number of IPs
-read -a kalibox -p 'Insert your Kali IP (Default: 127.0.0.1): ' #This host should be accessible via ssh-keys. SSH Password prompt won't work
+read -a kalibox -p 'Insert your Kali IP (Default: 127.0.0.1): ' #This host should be accessible using preset ssh-keys (.authorized_keys). SSH Password prompt won't work and it will break terminator
 read -a kaliport -p 'Insert your Kali Port (Default: 22): ' #The ssh service on this host should be running on port 2222 by default
 
 if [ -z "$kalibox" ]

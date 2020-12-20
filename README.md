@@ -22,7 +22,7 @@ __autoterm.sh__ - A script that will replace the placeholder ProjectX and #1,2,3
 cp ~/.config/terminator/config.bak ~/.config/terminator/config
 count=0 #Counter for Number of IPs
 
-# This host should be accessible via ssh-keys. SSH Password prompt won't work
+# This host should be accessible using present ssh-keys. SSH Password setup will break terminator.
 read -a kalibox -p 'Insert your Kali IP (Default: 127.0.0.1): '
 # The ssh service on this host should be running on port 22 by default
 read -a kaliport -p 'Insert your Kali Port (Default: 22): ' 

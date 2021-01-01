@@ -74,7 +74,8 @@ echo 'Terminator config successfully changed.'
 
 
 __dollar_ip_prompt_command.sh__ - Has a PROMPT_COMMAND env variable that will track a directory named using an IP on the current path (pwd)
-                             and it will set the $ip env variable to that IP named directory. The code should be place on .bashrc or .profile.
+                             and it will set the $ip env variable to that IP named directory. The code should be place on .bashrc or .zshrc. For zsh you have to add the line ```bash precmd() { eval "$PROMPT_COMMAND" }``` at the end of the .zshrc file
+
 
 ```bash
 # Example - $ip env variable is automatically set using the code below

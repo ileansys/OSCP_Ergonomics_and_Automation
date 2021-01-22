@@ -1,8 +1,21 @@
 #!/bin/bash
 
-echo 'Rule: Provide empty inputs to generate a full characterset payload.'
-echo 'Rule: Provide pattern length only as input to generate the pattern.'
-echo 'Rule: Put exploit.py and badcharset.py on the same path as this file.'
+cat << "EOF"
+#####################################################################
+##    .d8b.  db    db d888888b  .d88b.  d8888b.  .d88b.  d88888b    #
+#    d8' `8b 88    88 `~~88~~' .8P  Y8. 88  `8D .8P  Y8. 88'        #
+#    88ooo88 88    88    88    88    88 88oooY' 88    88 88ooo      #
+#    88~~~88 88    88    88    88    88 88~~~b. 88    88 88~~~      #
+#    88   88 88b  d88    88    `8b  d8' 88   8D `8b  d8' 88         #
+#    YP   YP ~Y8888P'    YP     `Y88P'  Y8888P'  `Y88P'  YP         #
+#####################################################################
+Rules:
+1. Provide empty inputs to generate a full characterset payload.
+2. Provide pattern length as the only input to generate a pattern.
+3. Put exploit.py and badcharset.py on the same path as this file.
+#####################################################################
+EOF
+
 read -a plength -p 'Specify (pattern length + 400) (from fuzzer.py): '
 read -a badchars -p 'Specify outlying bad characters (from mona): ' 
 read -a lhost -p 'Specify lhost (for venom): '

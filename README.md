@@ -73,7 +73,7 @@ echo 'Terminator config successfully changed.'
 ```
 
 
-__autobof.sh__ - A script of generating 'full hex shellcode characterset' -> 'hex shellcode with deducted badchars' -> 'msfpayload'. Autobof will automatically generate payloads and modify exploit.py payload variable. autobof's primary use is to aid in exploit creation while exploring vulnerable binaries with debuggers such as immunity or edb.  
+__autobof.sh__ - A script for generating 'full hex shellcode characterset' -> 'hex shellcode with deducted badchars' -> 'msfpayload'. Autobof will automatically generate payloads and modify exploit.py payload variable. Autobof's primary use is to aid in exploit creation while exploring vulnerable binaries with debuggers such as immunity or edb.  
 
 __badcharset.py__ - A script for generating the full hex shellcode.  
 

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # Take2 by Andrew Abwoga <andrew.abwoga@gmail.com>
 # GPL v2 only
-# How to setup. Just do this ---> sudo cp /usr/lib/python3.8/site-packages/terminatorlib/plugins/
+# How to setup. Just do this ---> sudo cp take2.py /usr/lib/python3.8/site-packages/terminatorlib/plugins/
 """take2.py - Take2 Plugin to take 'screenshots' of individual
 terminals and store them in the present working directory"""
 

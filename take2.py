@@ -56,5 +56,5 @@ class Take2(plugin.MenuItem):
         now = datetime.now()
         rightnow = now.strftime("%d-%m-%Y %H:%M:%S")
         print(self.get_cwd())
-        path = os.path.join(self.get_cwd(), 'OSCP' + rightnow)
+        path = os.path.join(self.get_cwd(), 'OSCP-' + rightnow)
         orig_pixbuf.savev(path, 'png', [], [])
